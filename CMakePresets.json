@@ -1,0 +1,46 @@
+{
+    "version": 3,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 22
+    },
+    "configurePresets": [
+        {
+            "name": "ninja",
+            "displayName": "Ninja",
+            "hidden": true,
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "$env{BUILD_TYPE}",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "$env{EXPORT_COMPILE_COMMANDS}",
+                "CMAKE_C_FLAGS": "$env{C_FLAGS}",
+                "CMAKE_CXX_FLAGS": "$env{C_FLAGS} $env{CXX_FLAGS}",
+                "CMAKE_C_COMPILER": "gcc",
+                "CMAKE_CXX_COMPILER": "g++",
+            }
+        },
+        {
+            "name": "debug-ninja",
+            "displayName": "Debug-Ninja",
+            "inherits": "ninja",
+            "environment": {
+                "BUILD_TYPE": "Debug",
+                "EXPORT_COMPILE_COMMANDS": "ON",
+                "C_FLAGS": "-W -Wall -Wextra -Wno-unused-parameter -Og -g -fPIC",
+                "CXX_FLAGS": "-fno-exceptions -std=c++11"
+            }
+        },
+        {
+            "name": "release-ninja",
+            "displayName": "Release-Ninja",
+            "inherits": "ninja",
+            "environment": {
+                "BUILD_TYPE": "Release",
+                "EXPORT_COMPILE_COMMANDS": "OFF",
+                "C_FLAGS": "-O3 -g -fPIC",
+                "CXX_FLAGS": "-fno-exceptions -std=c++11"
+            }
+        }
+    ]
+}

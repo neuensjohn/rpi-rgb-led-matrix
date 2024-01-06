@@ -7,8 +7,8 @@
 // For a utility with a few more features see
 // ../utils/text-scroller.cc
 
-#include "led-matrix.h"
-#include "graphics.h"
+#include "rgbmatrix/led-matrix.h"
+#include "rgbmatrix/graphics.h"
 
 #include <string>
 

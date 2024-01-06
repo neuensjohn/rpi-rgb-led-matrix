@@ -3,8 +3,7 @@
  * Using the C-API of this library.
  *
  */
-#include "led-matrix-c.h"
-
+#include "rgbmatrix/led-matrix-c.h"
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>

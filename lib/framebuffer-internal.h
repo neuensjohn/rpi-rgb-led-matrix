@@ -19,7 +19,7 @@
 #include <stdlib.h>
 
 #include "hardware-mapping.h"
-#include "../include/graphics.h"
+#include "rgbmatrix/graphics.h"
 
 namespace rgb_matrix {
 class GPIO;

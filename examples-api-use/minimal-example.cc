@@ -5,7 +5,7 @@
 // This code is public domain
 // (but note, that the led-matrix library this depends on is GPL v2)
 
-#include "led-matrix.h"
+#include "rgbmatrix/led-matrix.h"
 
 #include <unistd.h>
 #include <math.h>

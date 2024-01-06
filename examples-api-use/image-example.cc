@@ -16,7 +16,7 @@
 //   sudo apt-get install libgraphicsmagick++-dev libwebp-dev -y
 //   make image-example
 
-#include "led-matrix.h"
+#include "rgbmatrix/led-matrix.h"
 
 #include <math.h>
 #include <signal.h>
@@ -87,9 +87,9 @@ void CopyImageToCanvas(const Magick::Image &image, Canvas *canvas) {
       const Magick::Color &c = image.pixelColor(x, y);
       if (c.alphaQuantum() < 256) {
         canvas->SetPixel(x + offset_x, y + offset_y,
-                         ScaleQuantumToChar(c.redQuantum()),
-                         ScaleQuantumToChar(c.greenQuantum()),
-                         ScaleQuantumToChar(c.blueQuantum()));
+                         MagickCore::ScaleQuantumToChar(c.redQuantum()),
+                         MagickCore::ScaleQuantumToChar(c.greenQuantum()),
+                         MagickCore::ScaleQuantumToChar(c.blueQuantum()));
       }
     }
   }

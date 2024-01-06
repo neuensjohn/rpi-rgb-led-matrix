@@ -30,7 +30,7 @@
 #include <algorithm>
 
 #include "gpio.h"
-#include "../include/graphics.h"
+#include "rgbmatrix/graphics.h"
 
 namespace rgb_matrix {
 namespace internal {

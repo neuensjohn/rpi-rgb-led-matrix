@@ -5,10 +5,9 @@
 // covered by the GPL v2)
 //
 // This is a grab-bag of various demos and not very readable.
-#include "led-matrix.h"
-
-#include "pixel-mapper.h"
-#include "graphics.h"
+#include "rgbmatrix/led-matrix.h"
+#include "rgbmatrix/pixel-mapper.h"
+#include "rgbmatrix/graphics.h"
 
 #include <assert.h>
 #include <getopt.h>
